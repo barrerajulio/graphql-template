@@ -1,0 +1,11 @@
+directive @auth on FIELD_DEFINITION
+directive @protect(role: String) on FIELD
+
+type Query {
+  me: User
+}
+
+type User {
+  id: ID!
+  username: String!
+}
